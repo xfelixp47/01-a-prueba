@@ -1,30 +1,39 @@
 import React from "react";
-import styles from "./Navbar.module.css";
+import "./Navbar.css";
 
 interface NavbarProps {
-  onProfileClick?: () => void;
-  onCartClick?: () => void;
-  onCatalogClick?: () => void;
-  onContactsClick?: () => void;
+  onPerfilClick?: () => void;
+  onCarritoClick?: () => void;
+  onCatalogoClick?: () => void;
+  onContactosClick?: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  onProfileClick,
-  onCartClick,
-  onCatalogClick,
-  onContactsClick,
+  onPerfilClick,
+  onCarritoClick,
+  onCatalogoClick,
+  onContactosClick,
 }) => {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <h2>Mi Tienda</h2>
-      </div>
+    <nav className="navbar">
+      <div className="navbar-logo">Mi Tienda</div>
 
-      <div className={styles.menu}>
-        <button onClick={onCatalogClick}>Catálogo</button>
-        <button onClick={onContactsClick}>Contactos</button>
-        <button onClick={onCartClick}>🛒 Carrito</button>
-        <button onClick={onProfileClick}>👤 Perfil</button>
+      <div className="navbar-menu">
+        <button className="navbar-button" onClick={onCatalogoClick}>
+          Catálogo
+        </button>
+
+        <button className="navbar-button" onClick={onCarritoClick}>
+          Carrito
+        </button>
+
+        <button className="navbar-button" onClick={onContactosClick}>
+          Contactos
+        </button>
+
+        <button className="navbar-profile-button" onClick={onPerfilClick}>
+          Perfil
+        </button>
       </div>
     </nav>
   );

@@ -4,11 +4,15 @@ function App() {
   return (
     <>
       <Navbar
-        onCatalogClick={() => console.log("Catálogo")}
-        onContactsClick={() => console.log("Contactos")}
-        onCartClick={() => console.log("Carrito")}
-        onProfileClick={() => console.log("Perfil")}
+        onPerfilClick={() => console.log("Perfil")}
+        onCarritoClick={() => console.log("Carrito")}
+        onCatalogoClick={() => console.log("Catálogo")}
+        onContactosClick={() => console.log("Contactos")}
       />
+
+      <main>
+        <h1>Bienvenido a la tienda</h1>
+      </main>
     </>
   );
 }

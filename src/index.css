@@ -7,25 +7,41 @@
   color: white;
 }
 
-.logo h2 {
-  margin: 0;
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.menu {
+.navbar-menu {
   display: flex;
   gap: 1rem;
 }
 
-.menu button {
-  background-color: transparent;
-  border: 1px solid #ffffff50;
-  color: white;
+.navbar-button,
+.navbar-profile-button {
   padding: 0.6rem 1rem;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.menu button:hover {
+.navbar-button {
   background-color: #374151;
+  color: white;
+}
+
+.navbar-button:hover {
+  background-color: #4b5563;
+}
+
+.navbar-profile-button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-profile-button:hover {
+  background-color: #1d4ed8;
 }
