@@ -1,17 +1,27 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
+import ProfileModal from "./components/ProfileModal";
 
 function App() {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
   return (
     <>
       <Navbar
-        onPerfilClick={() => console.log("Perfil")}
-        onCarritoClick={() => console.log("Carrito")}
-        onCatalogoClick={() => console.log("Catálogo")}
-        onContactosClick={() => console.log("Contactos")}
+        onPerfilClick={() => setIsProfileOpen(true)}
       />
 
-      <main>
-        <h1>Bienvenido a la tienda</h1>
+      <ProfileModal
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        nombre="Juan Pérez"
+        email="juan@email.com"
+        telefono="+591 77777777"
+        direccion="Sucre, Bolivia"
+      />
+
+      <main style={{ padding: "2rem" }}>
+        <h1>Bienvenido</h1>
       </main>
     </>
   );
