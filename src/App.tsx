@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import ProfileModal from "./components/ProfileModal";
+import PokemonList from "./components/PokemonList";
 
 function App() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -22,6 +23,9 @@ function App() {
 
       <main style={{ padding: "2rem" }}>
         <h1>Bienvenido</h1>
+
+        {/* Lista de Pokémon */}
+        <PokemonList />
       </main>
     </>
   );
